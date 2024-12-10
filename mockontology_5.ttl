@@ -90,7 +90,7 @@ In the context of plasma study, examples would be decontamination, etching, etc.
                         <http://www.w3.org/2004/02/skos/core#altLabel> "Application Field"@en .
 
 ###  https://plasma-mds.org/ontology/plasma-o/PLAS-O_C0001
-plasma-o:PLAS-O_C0001 rdf:type owl:Class ;
+plas-o:PLAS-O_C0001 rdf:type owl:Class ;
                         rdfs:comment """The application field is the typical application area in which an object is used/applied.
 In the context of plasma study, examples would be decontamination, etching, etc."""@en ;
                         rdfs:label "Application Field"@en ;
