@@ -1,0 +1,99 @@
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix plasma-o: <https://plasma-mds.org/ontology/plasma-o/> .
+@prefix plas-o: <https://plasma-mds.org/ontology/plas-o/> .
+@prefix mock-o: <http://some-domain.org/ontology/mock-o/> .
+@base <https://plasma-mds.org/ontology/mock-o> .
+
+<https://plasma-mds.org/ontology/mock-o> rdf:type owl:Ontology ;
+                                            owl:versionIRI <https://plasma-mds.org/ontology/mock-o/0.7.0> ;
+                                            <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-9324-3236> ,
+                                                                               <https://orcid.org/0000-0002-2762-293X> ,
+                                                                               <https://orcid.org/0000-0002-4232-4543> ,
+                                                                               <https://orcid.org/0000-0002-7047-2770> ,
+                                                                               <https://orcid.org/0000-0003-4025-1712> ,
+                                                                               "Ihda Chaerony Siffa, Robert Wagner, Laura Vilardell Scholten, Fabian Hoppe, Markus M. Becker" ;
+                                            <http://purl.org/dc/terms/description> "The plasma ontology (Plasma-O) supports the standardized documentation of research data in the field of plasma physics. In accordance with typical plasma processes and applications, the ontology contains terminologicial knowledge about plasma source, plasma medium, and plasma target. Furthermore, metadata for the respectively applied diagnostic and modelling/simulation methods are represented."@en ;
+                                            <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
+                                            <http://purl.org/dc/terms/title> "Plasma Ontology (Plasma-O)"@en ;
+                                            <http://purl.org/vocab/vann/preferredNamespacePrefix> "mock-o" ;
+                                            rdfs:comment "The plasma ontology (Plasma-O) supports the standardized documentation of research data in the field of plasma physics. In accordance with typical plasma processes and applications, the ontology contains terminologicial knowledge about plasma source, plasma medium, and plasma target. Furthermore, metadata for the respectively applied diagnostic and modelling/simulation methods are represented."@en ;
+                                            rdfs:label "Plasma Ontology (Plasma-O)"@en ;
+                                            owl:versionInfo "0.7.0" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://some-domain.org/ontology/mock-o/MOCK-O_R0001
+mock-o:MOCK-O_R0001 rdf:type owl:ObjectProperty ;
+                   rdfs:domain mock-o:MOCK-O_C0001 ;
+                   rdfs:range mock-o:MOCK-O_C0002 ;
+                   rdfs:label "hasRelation"@en .
+
+
+###  http://some-domain.org/ontology/mock-o/MOCK-O_R0002
+mock-o:MOCK-O_R0002 rdf:type owl:ObjectProperty ;
+                   rdfs:domain mock-o:MOCK-O_C0001 ;
+                   rdfs:range mock-o:MOCK-O_C0003 ;
+                   rdfs:label "relatedTo"@en .
+
+
+###  http://some-domain.org/ontology/mock-o/MOCK-O_R0003
+mock-o:MOCK-O_R0003 rdf:type owl:ObjectProperty ;
+                   rdfs:domain mock-o:MOCK-O_C0002 ;
+                   rdfs:range mock-o:MOCK-O_C0003 ;
+                   rdfs:label "relatedBy"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://some-domain.org/ontology/mock-o/MOCK-O_C0001
+mock-o:MOCK-O_C0001 rdf:type owl:Class ;
+                   rdfs:label "SomeClass03"@en .
+
+
+###  http://some-domain.org/ontology/mock-o/MOCK-O_C0002
+mock-o:MOCK-O_C0002 rdf:type owl:Class ;
+                   rdfs:label "SomeClass02"@en .
+
+
+###  http://some-domain.org/ontology/mock-o/MOCK-O_C0003
+mock-o:MOCK-O_C0003 rdf:type owl:Class ;
+                   rdfs:label "SomeClass01"@en .
+
+
+###  https://plasma-mds.org/ontology/mock-o/MOCK-O_C0004
+mock-o:MOCK-O_C0004 rdf:type owl:Class ;
+                        rdfs:subClassOf mock-o:MOCK-O_C0001 ;
+                        rdfs:comment """The application field is the typical application area in which an object is used/applied.
+In the context of plasma study, examples would be decontamination, etching, etc."""@en ;
+                        rdfs:label "Application Field"@en ;
+                        <http://www.w3.org/2004/02/skos/core#altLabel> "Application Field"@en .
+
+###  https://plasma-mds.org/ontology/plasma-o/PLASMA-O_C0001
+plasma-o:PLASMA-O_C0001 rdf:type owl:Class ;
+                        rdfs:comment """The application field is the typical application area in which an object is used/applied.
+In the context of plasma study, examples would be decontamination, etching, etc."""@en ;
+                        rdfs:label "Application Field"@en ;
+                        <http://www.w3.org/2004/02/skos/core#altLabel> "Application Field"@en .
+
+###  https://plasma-mds.org/ontology/plasma-o/PLAS-O_C0001
+plas-o:PLAS-O_C0001 rdf:type owl:Class ;
+                        rdfs:comment """The application field is the typical application area in which an object is used/applied.
+In the context of plasma study, examples would be decontamination, etching, etc."""@en ;
+                        rdfs:label "Application Field"@en ;
+                        <http://www.w3.org/2004/02/skos/core#altLabel> "Application Field"@en .
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
