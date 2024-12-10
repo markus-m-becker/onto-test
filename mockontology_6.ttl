@@ -10,6 +10,7 @@
 @prefix vivo: <http://vivoweb.org/ontology/core#> .
 @prefix datacite: <http://purl.org/spar/datacite/> .
 @prefix plasma-o: <https://plasma-mds.org/ontology/plasma-o/> .
+@prefix po: <https://plasma-mds.org/ontology/po/> .
 @prefix plas-o: <https://plasma-mds.org/ontology/plas-o/> .
 @prefix mock-o: <http://some-domain.org/ontology/mock-o/> .
 @base <https://plasma-mds.org/ontology/mock-o> .
@@ -76,7 +77,6 @@ mock-o:MOCK-O_C0003 rdf:type owl:Class ;
 
 ###  https://plasma-mds.org/ontology/mock-o/MOCK-O_C0004
 mock-o:MOCK-O_C0004 rdf:type owl:Class ;
-                        rdfs:subClassOf mock-o:MOCK-O_C0001 ;
                         rdfs:comment """The application field is the typical application area in which an object is used/applied.
 In the context of plasma study, examples would be decontamination, etching, etc."""@en ;
                         rdfs:label "Application Field"@en ;
@@ -91,6 +91,20 @@ In the context of plasma study, examples would be decontamination, etching, etc.
 
 ###  https://plasma-mds.org/ontology/plasma-o/PLAS-O_C0001
 plas-o:PLAS-O_C0001 rdf:type owl:Class ;
+                        rdfs:comment """The application field is the typical application area in which an object is used/applied.
+In the context of plasma study, examples would be decontamination, etching, etc."""@en ;
+                        rdfs:label "Application Field"@en ;
+                        <http://www.w3.org/2004/02/skos/core#altLabel> "Application Field"@en .
+
+###  https://plasma-mds.org/ontology/plasma-o/C0001
+plasma-o:C0001 rdf:type owl:Class ;
+                        rdfs:comment """The application field is the typical application area in which an object is used/applied.
+In the context of plasma study, examples would be decontamination, etching, etc."""@en ;
+                        rdfs:label "Application Field"@en ;
+                        <http://www.w3.org/2004/02/skos/core#altLabel> "Application Field"@en .
+
+###  https://plasma-mds.org/ontology/po/PLASMA-O_C0001
+po:PLASMA-O_C0001 rdf:type owl:Class ;
                         rdfs:comment """The application field is the typical application area in which an object is used/applied.
 In the context of plasma study, examples would be decontamination, etching, etc."""@en ;
                         rdfs:label "Application Field"@en ;
